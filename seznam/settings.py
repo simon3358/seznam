@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'stream.apps.StreamConfig',
+    'django_cron',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +124,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRON_CLASSES = [
+    "stream.cron.MyCronJob",
+]
+
+REST_FRAMEWORK = {
+  'DEFAULT_PERMISSION_CLASSES': [
+      'rest_framework.permissions.AllowAny',
+  ],
+}
