@@ -19,6 +19,7 @@ body{
     display: flex;
     float:left;
     max-width: 29%;
+    height: 320px
 }
 .detail{
     padding: 32px;
@@ -27,7 +28,7 @@ body{
 }
 img{
     width: 100%;
-    padding: 0px 0px 8px 0px;
+    padding: 0px 0px 24px 0px;
 }
 h1{
     text-align:center;
