@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'stream/styles.css' %}">
+
+<div class="wrapper-container">
+    <h1>Stream Flix</h1>
+    {% for movie in movies %}
+        <div class="card">
+            <a href="{% url 'stream:detail' movie.id %}">
+                <img class="img" src ="{{movie.icon_uri}}">
+                <span>{{ movie.name }}</span>
+            </a>
+        </div>
+    {% endfor %}
+</div>

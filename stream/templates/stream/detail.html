@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'stream/styles.css' %}">
+
+<div class="wrapper-container">
+    <h1>Stream Flix</h1>
+        <div class="detail">
+            <p><b>Name:</b> {{ movie.name }}</p>
+            <p><b>Short name:</b> {{ movie.short_name }}</p>
+            <p><b>Source:</b> {{ movie.source }}</p>
+            <img class="img" src ="{{movie.icon_uri}}">
+            <p class="play"><a>Play Movie</a></p>
+            </a>
+        </div>
+</div>
