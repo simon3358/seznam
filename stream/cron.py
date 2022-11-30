@@ -14,6 +14,9 @@ class MyCronJob(CronJobBase):
         movies = response.json()
 
         for movie in movies:
+            movie_exist = Movie.objects.filter(name=movie['name'])
+            if movie_exist:
+                continue
             movie_object = Movie(
                 name = movie['name'],
                 short_name = movie['shortName'],
@@ -21,5 +24,4 @@ class MyCronJob(CronJobBase):
                 manifest_uri = movie['manifestUri'],
                 source = movie['source']
             )
-            print('--- Added movie: ', movie['name'])
             movie_object.save()
