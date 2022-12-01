@@ -4,7 +4,7 @@ from .models import Movie
 
 
 class MovieFilter(django_filters.FilterSet):
-
+    # set filtering fields, with 'contains' setting
     class Meta:
         model = Movie
         fields = ['name', 'source']

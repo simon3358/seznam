@@ -4,13 +4,15 @@
 <div class="wrapper-container">
     <h1>Stream Flix</h1>
     <form method="get">
-        {{ filter.form }}
-        <button type="submit">Search</button>
-    </form>
-    <form method="get">
-        <button type="submit" name="order_field" value="name">Name Ordering</button>
-        <button type="submit" name="order_field" value="short_name">Short-name Ordering</button>
-        <button type="submit" name="order_field" value="source">Source Ordering</button>
+        <div>
+            {{ filter.form }}
+            <button type="submit">Search</button>
+        </div>
+        <div>
+            <button type="submit" name="order_field" value="name">Name Ordering</button>
+            <button type="submit" name="order_field" value="short_name">Short-name Ordering</button>
+            <button type="submit" name="order_field" value="source">Source Ordering</button>
+        </div>
     </form>
     {% for movie in movies %}
         <div class="card">

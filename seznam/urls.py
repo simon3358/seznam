@@ -18,6 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('stream/', include('stream.urls')),
-    path('', include('stream.urls'))
+    path('stream/', include('stream.urls', namespace='stream')),
+    path('', include('stream.urls', namespace='stream'))  # not needed, just to don't get 404 on home-page
 ]

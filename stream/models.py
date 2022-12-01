@@ -2,12 +2,12 @@ from django.db import models
 
 
 class Movie(models.Model):
+    # define movie attributes - for simplicity just a few of the most important
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=50)
     icon_uri = models.CharField(max_length=50)
     manifest_uri = models.CharField(max_length=50)
     source = models.CharField(max_length=50)
-
     # focus = models.BooleanField()
     # disabled = models.BooleanField()
     # extra_text = models.JSONField()
@@ -33,6 +33,3 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
