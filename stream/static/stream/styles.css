@@ -4,7 +4,7 @@ body{
 .wrapper-container {
 	max-width: 1024px;
 	margin: 0 auto;
-	font: 1.2em Helvetica, arial, sans-serif;
+	font: 1em Helvetica, arial, sans-serif;
 }
 .wrapper-container > * {
 	border: 2px solid #000;
@@ -19,16 +19,26 @@ body{
     display: flex;
     float:left;
     max-width: 29%;
-    height: 320px
+    height: 350px
+}
+label, input, button{
+    margin: 10px;
+    padding: 5px;
 }
 .detail{
     padding: 32px;
     margin: 10px 4px;
     border-radius: 5px;
 }
+form{
+    text-align: center;
+}
+.name{
+    font-size: 1.2em;
+}
 img{
     width: 100%;
-    padding: 0px 0px 24px 0px;
+    padding: 0px 0px 12px 0px;
 }
 h1{
     text-align:center;
@@ -38,12 +48,6 @@ a:link {
 }
 a:visited {
 text-decoration: none;
-}
-a:hover {
-text-decoration: underline;
-}
-a:active {
-text-decoration: underline;
 }
 .play{
     text-align: center;

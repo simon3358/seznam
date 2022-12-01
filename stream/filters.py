@@ -7,7 +7,7 @@ class MovieFilter(django_filters.FilterSet):
 
     class Meta:
         model = Movie
-        fields = ['name']
+        fields = ['name', 'source']
         filter_overrides = {
             models.CharField: {
                 'filter_class': django_filters.CharFilter,
